@@ -1,0 +1,15 @@
+.button__ref {
+  background-image: url("../img/home/ico-shape.svg");
+  background-repeat: no-repeat;
+  background-position: 75%;
+  padding: 30px 79px 29px 55px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.button__ref:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}

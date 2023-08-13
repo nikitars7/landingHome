@@ -1,0 +1,293 @@
+@import 'nullstyle.scss';
+@import 'header.scss';
+@import 'button.scss';
+@font-face {
+    font-family: 'TT Hoves';
+    src: url('../fonts/TTHoves-Bold.eot');
+    src: local('../fonts/TT Hoves Bold'), local('TTHoves-Bold'),
+        url('../fonts/TTHoves-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTHoves-Bold.woff2') format('woff2'),
+        url('../fonts/TTHoves-Bold.woff') format('woff'),
+        url('../fonts/TTHoves-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Hoves';
+    src: url('../fonts/TTHoves-Regular.eot');
+    src: local('../fonts/TT Hoves Regular'), local('TTHoves-Regular'),
+        url('../fonts/TTHoves-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTHoves-Regular.woff2') format('woff2'),
+        url('../fonts/TTHoves-Regular.woff') format('woff'),
+        url('../fonts/TTHoves-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Hoves';
+    src: url('../fonts/TTHoves-Light.eot');
+    src: local('../fonts/TT Hoves Light'), local('TTHoves-Light'),
+        url('../fonts/TTHoves-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTHoves-Light.woff2') format('woff2'),
+        url('../fonts/TTHoves-Light.woff') format('woff'),
+        url('../fonts/TTHoves-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Hoves';
+    src: url('../fonts/TTHoves-Medium.eot');
+    src: local('../fonts/TT Hoves Medium'), local('TTHoves-Medium'),
+        url('../fonts/TTHoves-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/TTHoves-Medium.woff2') format('woff2'),
+        url('../fonts/TTHoves-Medium.woff') format('woff'),
+        url('../fonts/TTHoves-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+body{
+	font-family: 'TT Hoves';
+}
+.ibg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.ibg img {
+  display: none;
+}
+
+.ibg{
+  position: relative;
+  }
+.ibg img{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+object-fit: cover;
+}
+.wrapper{
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	flex-direction:column;
+	overflow: hidden;
+	margin: 0px auto;
+	max-width: 1440px;
+}
+.container{
+	max-width: 1200px;
+	padding: 0px 15px;
+	margin:0px  auto;
+}
+
+.page {}
+.page__slider {
+	padding-top: 110px;
+}
+.slider {}
+.slider__container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap:  calc(30px + (120 - 30) * ((100vw - 768px) / (1440 - 768)));
+	@media (max-width: 767px) {
+		display: block;
+	}
+}
+.slider__body {
+	display: flex;
+	flex-direction:column;
+	align-items: flex-start;
+	gap:90px;
+	@media (max-width: 767px) {
+     display: grid;
+     grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+     align-items: center;
+     gap:15px;
+     margin-top: 30px;
+	}
+	@media (max-width: 470px) {
+		 grid-template-columns: repeat(auto-fill,minmax(130px,1fr));
+	}
+	@media (min-width: 767px) {
+		order:1;
+	}
+}
+.slider__title {
+	text-transform: uppercase;
+	font-size: 64px;
+	color: var(--gray-4, #BDBDBD);
+	span{
+     color: var(--gray-1, #333);
+     font-weight: 700;
+	}
+	@media (max-width: 767px) {
+     font-size: 40px;
+	}
+	@media (max-width: 680px) {
+		  grid-column: 1 / 3;
+          grid-row: 1 / 2;
+          justify-self: center;
+	}
+}
+.slider__controlls {
+	justify-self: center;
+	display: flex;
+	align-items: center;
+}
+.slider__arrow {
+	border: 1px solid #F2F2F2;
+    background: #F9F9F9;
+    padding: 30px;
+	cursor: pointer;
+	background-image: url('../img/home/ico-shape.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 18px;
+	height: 8px;
+	&.swiper-button-disabled{
+	opacity: 0.5;
+	cursor: default;
+}
+}
+.slider__arrow_left {
+	transform:rotate(-180deg);
+}
+.slider__arrow_right {}
+.slider-pagination{
+	font-size: 24px;
+	justify-self: center;
+	.swiper-pagination-current{
+	display: inline-block;
+     margin-right: 25px;
+     color: var(--gray-4, #BDBDBD);
+	}
+	.swiper-pagination-total{
+		display: inline-block;
+	margin-left: 25px;
+	color: var(--gray-4, #BDBDBD);
+	}
+}
+.slider__swiper {
+@media (min-width: 767px) {
+		order:2;
+
+	}
+}
+.swiper {}
+.slider__wrapper {}
+.slider__slide {
+
+}
+.slide-home {
+	position: relative;
+}
+.slide-home__image {
+	padding-bottom: 106.5%;
+	overflow: hidden;
+	width: 770px;
+	img{
+		display: block;
+		object-position:center;
+		max-width: 100%;
+	}
+}
+.slide-home__ref {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: var(--gray-1, #333);
+	background-color: #fff;
+}
+
+.page__about {}
+.about {}
+.about__container {
+	margin-top: 120px;
+	margin-bottom: 150px;
+	display: grid;
+	grid-template-columns:repeat(auto-fill,minmax(400px,1fr));
+	grid-template-rows: 220px 170px;
+	gap:calc(10px + (30 - 10) * ((100vw - 768px)/(1440 - 768)));
+	background-color: var(--1, #FBFBFB);
+	padding: 30px 70px 30px 100px;
+	@media (max-width: 600px) {
+		padding: 30px 10px 30px 10px;
+		grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+	}
+}
+.about__image {
+	display: grid;
+	grid-template-columns: auto auto;
+    grid-template-rows:  40px 160px 50px 50px;
+	gap:calc(20px + (30 - 20) * ((100vw - 768px)/(1440 - 768)));
+    @media (max-width: 600px) {
+
+	}
+}
+.image-about {
+	position: relative;
+	overflow: hidden;
+	padding: 0px 0px 50% 0px;
+	img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+	}
+	&:nth-child(1){
+    grid-row:span 2
+	}
+	&:nth-child(2){
+		grid-row:2/5;
+		grid-column:2/3
+	}
+	&:nth-child(3){
+		grid-row:3/5;
+
+	}
+	@media (max-width: 600px) {
+	
+	}
+}
+
+.about__body {
+	display: flex;
+	flex-direction:column;
+	gap:calc(20px + (30 - 20) * ((100vw - 768px)/(1440 - 768)));
+	
+}
+.about__title {
+	color: var(--gray-4, #BDBDBD);
+	font-size: 64px;
+	font-weight: 300;
+	margin-bottom:calc(10px + (20 - 10) * ((100vw - 768px)/(1440 - 768)));
+	@media (max-width: 600px) {
+		font-size: 50px;
+	}
+}
+.about__text {
+	color: #000;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.56;
+	margin-bottom:calc(10px + (13 - 10) * ((100vw - 768px)/(1440 - 768)));
+}
+.about__button {
+background-color: #fff;
+align-self: flex-start;
+width: 222px;
+background-position:60%;
+font-weight: 400;
+color: var(--gray-1, #333);
+}
+
+
+
