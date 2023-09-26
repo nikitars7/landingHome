@@ -95,9 +95,15 @@ object-fit: cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap:  calc(30px + (120 - 30) * ((100vw - 768px) / (1440 - 768)));
 	@media (max-width: 767px) {
 		display: block;
+	}
+	@media (min-width: 1920px) {
+		gap:100px;
+	}
+	@media (max-width: 1920px) {
+		gap:  calc(30px + (120 - 30) * ((100vw - 768px) / (1440 - 768)));
+
 	}
 }
 .slider__body {
